@@ -1,4 +1,4 @@
-# ballchasing_replay_uploader
+# ballchasing.com replay uploader
 This tool will monitor the Rocket League replay folder and upload new replay files to ballchasing.com when they're detected, using the ballchasing.com API token provided.
 
 For this tool to function, create a file in the same folder as the tool named 'token.txt' and in the txt file you should place your ballchasing.com API token.
