@@ -65,7 +65,7 @@ $actionHandle =
 				# Write-Host "The value of $headers is: '$headers'"
 				# Write-Host "Token in header: '$($headers['Authorization'])'"
 				# Write-Host "Upload URL is: '$uploadURL'"
-				$response = Invoke-RestMethod -Uri $uploadURL -Method Post -Headers $headers -ContentType "multipart/form-data; boundary=$boundary" -Body $body -UseBasicParsing
+				Invoke-RestMethod -Uri $uploadURL -Method Post -Headers $headers -ContentType "multipart/form-data; boundary=$boundary" -Body $body -UseBasicParsing
 				Write-Host "Upload successful"
 			}
 			catch
@@ -99,5 +99,4 @@ $fileWatcher.EnableRaisingEvents = $false ; #Write-Host "Disabling watcher event
 $fileWatcher.Dispose() ; #Write-Host "Killing watcher"
 $actionableEvent | Unregister-Event ; #Write-Host "Unregistering file create event subscription"
 $errorEvent | Unregister-Event ; #Write-Host "Unregistering error event subscription"
-
 }
