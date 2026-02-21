@@ -1,4 +1,4 @@
-# For the latest version of this script please check xxxxxxxxxxxxxx
+# For the latest version of this script please check https://github.com/mark-codes-stuff/ballchasing_replay_uploader
 
 try
 {
@@ -99,4 +99,5 @@ $fileWatcher.EnableRaisingEvents = $false ; #Write-Host "Disabling watcher event
 $fileWatcher.Dispose() ; #Write-Host "Killing watcher"
 $actionableEvent | Unregister-Event ; #Write-Host "Unregistering file create event subscription"
 $errorEvent | Unregister-Event ; #Write-Host "Unregistering error event subscription"
+
 }
