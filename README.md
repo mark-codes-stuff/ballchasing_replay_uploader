@@ -21,4 +21,6 @@ If it errors out then it'll probably be one of the following errors:
 
 409 - this means the replay is a duplicate and has already been uploaded before
 
+429 - you have hit the upload limit
+
 50x - something is wrong with ballchasing.com and you can check the website status here: https://ballchasingstatus.com/
