@@ -31,6 +31,9 @@ If it errors out then it'll probably be one of the following errors:
 - 50x - something is wrong with ballchasing.com and you can check the website status here: https://ballchasingstatus.com/
 
 ## Credits / references
-Help with encoding the file and creating the request body - https://gist.github.com/weipah/19bfdb14aab253e3f109
 
-Ballchasing.com API info - https://ballchasing.com/doc/api
+- Ballchasing.com API info - https://ballchasing.com/doc/api
+
+- Help with formatting the request - https://curlconverter.com/powershell-restmethod/ (although I realised later PS 5.1 doesn't use the Form parameter but the rest was helpful!)
+
+- Help with encoding the file and creating the request body - https://gist.github.com/weipah/19bfdb14aab253e3f109
