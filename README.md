@@ -17,10 +17,10 @@ This has been tested on Windows 11 / PowerShell 5.1 and does not require any add
 
 If it errors out then it'll probably be one of the following errors:
 
-401 - check you have the correct API token inside the token.txt file and that the txt file is in the same folder as the .ps1 script file. Also ensure the token is all on one line and that there are no extra line breaks in the txt file.
+  401 - check you have the correct API token inside the token.txt file and that the txt file is in the same folder as the .ps1 script file. Also ensure the token is all on one line and that there are no extra line breaks in the txt file.
 
-409 - this means the replay is a duplicate and has already been uploaded before
+  409 - this means the replay is a duplicate and has already been uploaded before
 
-429 - you have hit the upload limit
+  429 - you have hit the upload limit
 
-50x - something is wrong with ballchasing.com and you can check the website status here: https://ballchasingstatus.com/
+  50x - something is wrong with ballchasing.com and you can check the website status here: https://ballchasingstatus.com/
