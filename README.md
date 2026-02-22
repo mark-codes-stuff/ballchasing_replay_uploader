@@ -2,7 +2,9 @@
 
 ## What is this?
 
-This tool will monitor the Rocket League replay folder and upload new replay files to ballchasing.com when they're detected, using the ballchasing.com API token provided. I've tried to make this as easy as possible to use.
+This tool will monitor the Rocket League replay folder and upload new replay files to ballchasing.com when they're detected, using the ballchasing.com API token provided. The popular replay uploader plugin for bakkesmod won't work in the near future due to an anti-cheat being added to Rocket League.
+
+I've tried to make this as easy as possible to use, if you run into any issues make you've read the below info.
 
 ## How to use
 
