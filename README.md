@@ -10,7 +10,7 @@ For this tool to function, create a file in the same folder as the .ps1 file nam
 
 In the same folder, create a txt file named "visibility.txt" and enter into the file your preference for replay visibility (public, unlisted, private).
 
-When first running the script it'll check you have these files - if you're missing the preference.txt file you'll be asked to make one.
+When first running the script it'll check you have these files - if you're missing the visibility.txt file you'll be asked to make one.
 
 To run the script, you can right-click on the file and choose Run with PowerShell. Hit Ctrl + C in the PowerShell window once you're finished playing Rocket league to close it.
 
