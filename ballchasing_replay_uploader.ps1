@@ -6,18 +6,27 @@ try
 $currentUser = $env:username
 $replayPath = "C:\Users\$currentUser\Documents\My Games\Rocket League\TAGame\Demos"
 
-# Testing to make sure the path is actually valid and the prerequisite files exist too & make the visibility pref file if it's not detected
+# Testing to make sure the path is actually valid and the prerequisite files exist too
+# If the files don't exist, create them
 	if (-not (Test-Path -Path $replayPath))
 	{
 		Write-Host "There is something wrong with the replay folder path: $replayPath"
 		exit
 	}
 	
-	if (-not (Test-Path -Path "./token.txt"))
+	function Test-Token
 	{
-		Write-Host "token.txt file not detected, please ensure token.txt is saved in the same folder as the script .ps1 file"
-		exit
+		if (-not (Test-Path -Path "./token.txt"))
+		{
+			Write-Host "token.txt file not detected, the script will create the file now"
+			Write-Host "Go to https://ballchasing.com/upload and copy your upload token to the clipboard"
+			$tokenInput = Read-Host "Paste your token in here"
+			New-Item -Path . -Name "token.txt" -ItemType File -Value $tokenInput
+			$token = Get-Content -Path .\token.txt
+			Write-Host "token file created with token:$token"			
+		}
 	}
+	Test-Token
 
 	function Test-Visibility
 	{
@@ -28,14 +37,20 @@ $replayPath = "C:\Users\$currentUser\Documents\My Games\Rocket League\TAGame\Dem
 				if ($visibilityPref -eq 1)
 				{
 					New-Item -Path . -Name "visibility.txt" -ItemType File -Value "public"
+					$visibilityPref = Get-Content -Path .\visibility.txt
+					Write-Host "Replay visibility set to: $visibilityPref"
 				}
 				elseif ($visibilityPref -eq 2)
 				{
 					New-Item -Path . -Name "visibility.txt" -ItemType File -Value "unlisted"
+					$visibilityPref = Get-Content -Path .\visibility.txt
+					Write-Host "Replay visibility set to: $visibilityPref"
 				}
 				elseif ($visibilityPref -eq 3)
 				{
 					New-Item -Path . -Name "visibility.txt" -ItemType File -Value "private"
+					$visibilityPref = Get-Content -Path .\visibility.txt
+					Write-Host "Replay visibility set to: $visibilityPref"
 				}
 				else
 				{
