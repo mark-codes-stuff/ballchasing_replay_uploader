@@ -1,7 +1,7 @@
 # ballchasing.com replay uploader
 
-## Epic client issues
-**Demos saved while playing through the Epic client will not get picked up by the script, I'll fix this in the next couple of days**
+## Epic client & match history
+**Demos saved while playing through the Epic client and/or saved through the match history menu will not get picked up by the script, I'll fix this in the next couple of days**
 
 ## What is this?
 
