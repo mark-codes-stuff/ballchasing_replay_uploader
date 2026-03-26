@@ -1,8 +1,5 @@
 # ballchasing.com replay uploader
 
-## Epic client & match history
-**Demos saved while playing through the Epic client and/or saved through the match history menu will not get picked up by the script, I'll fix this in the next couple of days**
-
 ## What is this?
 
 This tool will monitor the Rocket League replay folder and upload new replay files to ballchasing.com when they're detected, using the ballchasing.com API token provided. Replays will be uploaded with your specified visibility preference. The popular replay uploader plugin for bakkesmod won't work in the near future due to an anti-cheat being added to Rocket League which will block bakkesmod injection. I want to learn PowerShell and figured this would be a handy way to get started with it and it might help a few people too.
