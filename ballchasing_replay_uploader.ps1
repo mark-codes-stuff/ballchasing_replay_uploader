@@ -1,4 +1,5 @@
 # For FAQ/help or to get the latest version of this script please check https://github.com/mark-codes-stuff/ballchasing_replay_uploader
+# Licensed under the MIT Licence - see the LICENCE file in the repo for details
 
 $ErrorActionPreference = "Continue"
 
