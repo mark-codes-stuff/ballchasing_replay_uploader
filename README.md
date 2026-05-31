@@ -10,7 +10,7 @@ I've tried to make this as easy as possible to use, if you run into any issues m
 
 On first run, the script will help you create 2 files needed for the script to run, these files contain your upload/API token and your replay visibility preference. If you don't have a token, get one from here: https://ballchasing.com/upload
 
-The next time it runs, it will check these files still exist in case you accidentally delete them or something. The files will be created in the folder where Rocket League stores its settings, so you can run the script from anywhere and it should still work.
+The next time it runs, it will check these files still exist in case you accidentally delete them or something. The files will be created in the folder where Rocket League stores its settings, so you can run the script from anywhere and it should still work. The script had a replay upload count so you can keep an eye on how many you've uploaded during the session.
 
 To run the script, you can right-click on the file and choose Run with PowerShell. Hit Ctrl + C in the PowerShell window or just close the window once you're finished playing Rocket league to close it down.
 
@@ -20,7 +20,7 @@ This has been tested on Windows 11 / PowerShell 5.1 and should not require any a
 
 I've tested this a fair amount and haven't managed to break it yet, but if you did run into any repeat issues you can try the below steps.
 
-To stop PS from just closing the window if the script errors out, run PowerShell from the script directory (shift + right-click > Open PowerShell window here), or open PowerShell and cd to wherever you have the script saved e.g.:
+The script should pause to let you read any errors it throws up. If for any reason it doesn't do this, run PowerShell from the script directory (shift + right-click > Open PowerShell window here), or open PowerShell and cd to wherever you have the script saved e.g.:
 
 cd ""C:\Users\xxxxxxxxxx\Downloads\"
 
@@ -39,6 +39,8 @@ If the upload errors out then it'll probably be one of the following errors and 
   - Bear in mind that ballchasing.com has a daily and weekly upload limit which you might hit while playing the game. For more info read this page here: https://ballchasing.com/doc/faq#upload-quota
 
   - To see your current quota, see the upload page here: https://ballchasing.com/upload
+
+  - When this error is triggered you will be reminded of how many you've uploaded during the session too
 
 - 50x - something is wrong with ballchasing.com and you can check the website status here: https://ballchasingstatus.com/
 
