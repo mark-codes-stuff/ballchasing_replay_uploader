@@ -12,7 +12,7 @@ I've tried to make this as easy as possible to use, if you run into any issues m
 
 On first run, the script will help you create 2 files needed for the script to run, these files contain your upload/API token and your replay visibility preference. If you don't have a token, get one from here: https://ballchasing.com/upload
 
-The next time it runs, it will check these files still exist in case you accidentally delete them or something. The files will be created in the folder where Rocket League stores its settings, so you can run the script from anywhere and it should still work. The script has a replay upload count so you can keep an eye on how many you've uploaded during the session.
+The next time it runs, it will check these files still exist in case you accidentally delete them or something. The files will be created in the folder where Rocket League stores its settings, so you can run the script from anywhere and it should still work. The script has a replay upload count so you can keep an eye on how many you've uploaded during the session. It will also let you know if a newer version is available to download from here.
 
 To run the script, you can right-click on the file and choose Run with PowerShell. Hit Ctrl + C in the PowerShell window or just close the window once you're finished playing Rocket league to close it down.
 
