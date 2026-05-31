@@ -4,18 +4,26 @@ $ErrorActionPreference = "Continue"
 
 try {
 
-	# Grabbing current user/profile path to get location of Rocket League folders, creating vars to use later
-	$replayPathSteam = "$env:USERPROFILE\Documents\My Games\Rocket League\TAGame\Demos"
-	$replayPathEpic = "$env:USERPROFILE\Documents\My Games\Rocket League\TAGame\DemosEpic"
-	$settingsPath = "$env:USERPROFILE\Documents\My Games\Rocket League\TAGame"
-	$script:uploadCount = 0
-
 	# Function to easily write to the console with timestamps
 	function Write-Log {
 		param($logContent)
 		$timestamp = Get-Date -Format HH:mm
 		Write-Host "[$timestamp]: $logContent"
 	}
+
+	# Just a quick check to see if you're running the latest version, nothing too fancy
+	$scriptVersion = "2026-05-31"
+	$response = Invoke-RestMethod -Uri "https://api.github.com/repos/mark-codes-stuff/ballchasing_replay_uploader/commits?path=ballchasing_replay_uploader.ps1&per_page=1"
+	$lastUpdated = $response[0].commit.committer.date.Substring(0, 10)
+	if ($lastUpdated -gt $scriptVersion) {
+		Write-Log "A newer version of the script is available on GitHub"
+	}
+
+	# Grabbing current user/profile path to get location of Rocket League folders, creating vars to use later
+	$replayPathSteam = "$env:USERPROFILE\Documents\My Games\Rocket League\TAGame\Demos"
+	$replayPathEpic = "$env:USERPROFILE\Documents\My Games\Rocket League\TAGame\DemosEpic"
+	$settingsPath = "$env:USERPROFILE\Documents\My Games\Rocket League\TAGame"
+	$script:uploadCount = 0
 
 	# Function for checking the Rocket League folders exist
 	function Test-Folders {
